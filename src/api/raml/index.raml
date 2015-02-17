@@ -46,7 +46,7 @@ traits:
       application/json:
         example: |
           {
-            "firstname": "Romain",
+            "firstname": "Florent",
             "lastname": "Terieur",
             "phone": "+6624582",
             "roles": [
@@ -152,7 +152,56 @@ traits:
                 },
                 ...
               ]
-
+/issueType:
+  description: issueType resource.
+  get:
+    is: [auth: { roles: 'any' }]
+    description: Retrive the list of type of issues.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                },
+                {
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Degat",
+                  "desc": "Degat sur la voix public",
+                },
+                ...
+              ]
+  post:
+    description: Create a new issueType.
+    body:
+      application/json:
+        example: |
+          {
+            "id": "Romain",
+            "lastname": "Terieur",
+            "phone": "+6624582",
+            "roles": [
+              "citizen"
+            ]
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": "54d8ae163fd30364605c81a4",
+                "firstname": "Romain",
+                "lastname": "Terieur",
+                "phone": "+6624582",
+                "roles": [
+                  "citizen"
+                ]
+              }
 
 
 
