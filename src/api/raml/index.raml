@@ -60,7 +60,7 @@ traits:
             example: |
               {
                 "id": "54d8ae163fd30364605c81a4",
-                "firstname": "Romain",
+                "firstname": "Florent",
                 "lastname": "Terieur",
                 "phone": "+6624582",
                 "roles": [
@@ -124,7 +124,7 @@ traits:
   description: issues resource.
   get:
     is: [auth: { roles: 'staff' }]
-    description: Retrive the list of the ussues.
+    description: Retrive the list of the issues.
     responses:
       200:
         body:
@@ -132,34 +132,121 @@ traits:
             example: |
               [
                 {
-                  "id": "54d8ae163fd30364605c81a4",
-                  "userId": "54d8ae163fd3036",
+                  "userId": "54d8ae163f8776",
                   "issueTypeId": "e163fd3036",
-                  "desc": "created",
+                  "desc": "Problem on road Morges 21",
                   "date": "2012-12-31",
                   "geoData": {
-                    "longitude": 41.123213,
-                    "latitude": 6.623453323
+                  "long": 41.123213,
+                  "lat": 7.623453323
                   },
-                  "status": "created",
-
+                  "comment":{
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Winter is coming"
+                  },
+                  "tag": "water,fire",
+                  "status" : "created"
                 },
                 {
 
-                  "id": "54d8ae163fd30364605c81a4",
-                  "userId": "54d8ae163fd3036",
+                  "userId": "54d8ae163f8776",
                   "issueTypeId": "e163fd3036",
-                  "desc": "created",
+                  "desc": "Problem on riverside",
                   "date": "2012-12-31",
                   "geoData": {
-                    "longitude": 41.123213,
-                    "latitude": 6.623453323
+                  "long": 41.123213,
+                  "lat": 7.623453323
                   },
-                  "status": "created",
-
+                  "comment":{
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Warning : bad dog"
+                  },
+                  "tag": "water,fire",
+                  "status" : "in_progress"
                 },
                 ...
               ]
+  post:
+    description: Create a new issue.
+    body:
+      application/json:
+        example: |
+          {
+                "userId": "54d8ae163f8776",
+                "issueTypeId": "e163fd3036",
+                "desc": "Problem on road Morges 21",
+                "date": "2012-12-31",
+                "geoData": {
+                "long": 41.123213,
+                "lat": 7.623453323
+                },
+                "comment":{
+                "author": "23432sfsa",
+                "date": "2012-12-24",
+                "content":"Winter is coming"
+                },
+                "tag": "water,fire",
+                "status" : "created"
+          }
+  /{id}:
+    get:
+      is: [auth: {roles: 'any'} ]
+      description: Retrieve the details of a specific issue.
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "userId": "54d8ae163f8776",
+                  "issueTypeId": "e163fd3036",
+                  "desc": "Problem on road Morges 21",
+                  "date": "2012-12-31",
+                  "geoData": {
+                  "long": 41.123213,
+                  "lat": 7.623453323
+                  },
+                  "comment":{
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Winter is coming"
+                  },
+                  "tag": "water,fire",
+                  "status" : "created"
+                }     
+    put:
+      is: [auth: {roles: 'staff'} ]
+      description: Update the details of a specific issues.
+      body:
+        application/json:
+          example: |
+            {
+              "userId": "54d8ae163f8776",
+              "issueTypeId": "e163fd3036",
+              "desc": "Problem on road Morges 21",
+              "date": "2012-12-31",
+              "geoData": {
+              "long": 41.123213,
+              "lat": 7.623453323
+              },
+              "comment":{
+              "author": "23432sfsa",
+              "date": "2012-12-24",
+              "content":"Winter is coming"
+              },
+              "tag": "water,fire",
+              "status" : "created"
+                }
+    delete:
+      is: [auth: {roles: 'staff'} ]
+      description: Delete a specific issue.
+      responses:
+        204:
+          body:
+
+
 /issueType:
   description: issueType resource.
   get:
