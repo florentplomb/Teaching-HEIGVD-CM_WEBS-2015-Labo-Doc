@@ -121,10 +121,10 @@ traits:
         204:
           body:
 /issues:
-  description: User resource.
+  description: issues resource.
   get:
     is: [auth: { roles: 'staff' }]
-    description: Retrive the list of the users.
+    description: Retrive the list of the ussues.
     responses:
       200:
         body:
@@ -133,22 +133,30 @@ traits:
               [
                 {
                   "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Romain",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen"
-                  ]
+                  "userId": "54d8ae163fd3036",
+                  "issueTypeId": "e163fd3036",
+                  "desc": "created",
+                  "date": "2012-12-31",
+                  "geoData": {
+                    "longitude": 41.123213,
+                    "latitude": 6.623453323
+                  },
+                  "status": "created",
+
                 },
                 {
-                  "id": "54d8ae163fd30364605c81a9",
-                  "firstname": "Romain",
-                  "lastname": "Terieur",
-                  "phone": "+8211332",
-                  "roles": [
-                    "citizen",
-                    "staff"
-                  ]
+
+                  "id": "54d8ae163fd30364605c81a4",
+                  "userId": "54d8ae163fd3036",
+                  "issueTypeId": "e163fd3036",
+                  "desc": "created",
+                  "date": "2012-12-31",
+                  "geoData": {
+                    "longitude": 41.123213,
+                    "latitude": 6.623453323
+                  },
+                  "status": "created",
+
                 },
                 ...
               ]
