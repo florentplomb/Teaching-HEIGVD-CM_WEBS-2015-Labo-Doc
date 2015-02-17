@@ -120,6 +120,42 @@ traits:
       responses:
         204:
           body:
+/issues:
+  description: User resource.
+  get:
+    is: [auth: { roles: 'staff' }]
+    description: Retrive the list of the users.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": "54d8ae163fd30364605c81a4",
+                  "firstname": "Romain",
+                  "lastname": "Terieur",
+                  "phone": "+6624582",
+                  "roles": [
+                    "citizen"
+                  ]
+                },
+                {
+                  "id": "54d8ae163fd30364605c81a9",
+                  "firstname": "Romain",
+                  "lastname": "Terieur",
+                  "phone": "+8211332",
+                  "roles": [
+                    "citizen",
+                    "staff"
+                  ]
+                },
+                ...
+              ]
+
+
+
+
 
 /data:
   description: Data resource.
