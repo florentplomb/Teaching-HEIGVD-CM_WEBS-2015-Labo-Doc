@@ -49,3 +49,10 @@ To [APIDoc Seed](https://github.com/lotaris/apidoc-seed).
 [jade]: http://jade-lang.com/
 [stylus]: http://learnboost.github.io/stylus/
 [bootstrap]: http://getbootstrap.com/
+
+
+## Students
+
+Clélia Panchaud MM41
+Florent Plomb MIT41
+
