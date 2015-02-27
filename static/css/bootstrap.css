@@ -921,7 +921,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: #fff;
   text-decoration: none;
 }
 a:hover,
@@ -3598,6 +3598,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  color #fff
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -3605,11 +3606,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #eee;
 }
 .nav > li.disabled > a {
-  color: #777;
+  color: #fff;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #777;
+  color: #fff;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
