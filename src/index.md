@@ -1,12 +1,11 @@
 ---
-title: Welcome
+title: Smart City
 template: layout.jade
 menuIndex: 1
 ---
 
-# Smart City
+# Citizen Engagement
 
-## Citizen Engagement
 
 Welcome on board! You are about to discover the wonderful world where people are participating
 in the city life everyday.
