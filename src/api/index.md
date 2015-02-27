@@ -1,7 +1,7 @@
 ---
 title: Overview
 sectionName: API Reference
-template: api.jade
+template: menu.jade
 menuIndex: 3
 ---
 
