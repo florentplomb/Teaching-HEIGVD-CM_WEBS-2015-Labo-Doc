@@ -8,6 +8,7 @@ menuIndex: 3
 This pages contains general documentation about the API. Use the links on the
 right to navigate to specific resources.
 
+
 ### Content-type
 
 The API uses the JSON format. Unless specified otherwise, all requests and

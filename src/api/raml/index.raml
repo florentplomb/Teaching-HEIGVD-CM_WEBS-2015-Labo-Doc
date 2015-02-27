@@ -133,32 +133,31 @@ traits:
               [
                 {
                   "id" : "5463rasd2321321",
-                  "userId": "54d8ae163f8776",
-                  "issueTypeId": "e163fd3036",
-                  "desc": "Problem on road Morges 21",
-                  "date": "2012-12-31",
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-                  "comment":{
-                  "author": "2343223sa",
-                  "date": "2012-12-24",
-                  "content":"Winter is coming"
-                  },
                   "tag": "water,fire",
-                  "status" : "created"
-                },
-                {
-                  "id" : "5463rasd2321321",
-                  "userId": "54d8ae163f8776",
-                  "issueTypeId": "e163fd3036",
-                  "desc": "Problem on riverside",
+                  "status" : "created",
+                  "desc": "Probleme à l'avenue de Morges 21",
                   "date": "2012-12-31",
+
+                  "users":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "firstname": "Florent",
+                  "lastname": "Terieur",
+                  "phone": "+6624582",
+                  "roles": [
+                    "citizen",]
+                  },
+
+                  "issueType":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                  },
+                  
                   "geoData": {
                   "long": 41.123213,
                   "lat": 7.623453323
                   },
+
                   "comment":[
                   {
                   "author": "23432sfsa",
@@ -169,68 +168,35 @@ traits:
                   "author": "23432sfsa",
                   "date": "2012-12-24",
                   "content":"bad dog on the place"
-                  }
-                  ],
+                  }],
+                  },
+                  {
+                  "id" : "5463rasd2321321",
                   "tag": "water,fire",
-                  "status" : "in_progress"
-                },
-                ...
-              ]
-  post:
-    description: Create a new issue.
-    body:
-      application/json:
-        example: |
-          {
-                "users":{
-                "id": "54d8ae163fd30364605c81a4",
-                "firstname": "Florent",
-                "lastname": "Terieur",
-                "phone": "+6624582",
-                "roles": [
-                  "citizen"
-                ],
-                "issueTypeId": "e163fd3036",
-                "desc": "Problem on road Morges 21",
-                "date": "2012-12-31",
-                "geoData": {
-                "long": 41.123213,
-                "lat": 7.623453323
-                },
-                "comment":{
-                "author": "23432sfsa",
-                "date": "2012-12-24",
-                "content":"Winter is coming"
-                },
-                "tag": "water,fire",
-                "status" : "created"
-          }
-  /{id}:
-    get:
-      is: [auth: {roles: 'any'} ]
-      description: Retrieve the details of a specific issue.
-      responses:
-        200:
-          body:
-            application/json:
-              example: |
-                {
+                  "status" : "created",
+                  "desc": "Probleme à l'avenue de Morges 21",
+                  "date": "2012-12-31",
+
                   "users":{
                   "id": "54d8ae163fd30364605c81a4",
                   "firstname": "Florent",
                   "lastname": "Terieur",
                   "phone": "+6624582",
                   "roles": [
-                    "citizen"
-                  ]
+                    "citizen",]
                   },
-                  "issueTypeId": "e163fd3036",
-                  "desc": "Problem on road Morges 21",
-                  "date": "2012-12-31",
+
+                  "issueType":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                  },
+                  
                   "geoData": {
                   "long": 41.123213,
                   "lat": 7.623453323
                   },
+
                   "comment":[
                   {
                   "author": "23432sfsa",
@@ -240,43 +206,137 @@ traits:
                   {
                   "author": "23432sfsa",
                   "date": "2012-12-24",
-                  "content":"Winter is coming"
+                  "content":"bad dog on the place"
+                  }],
                   }
-                  ],
+                ...
+              ]
+  post:
+    description: Create a new issue.
+    body:
+      application/json:
+        example: |
+                  {
+                  "id" : "5463rasd2321321",
                   "tag": "water,fire",
-                  "status" : "created"
-                }     
+                  "status" : "created",
+                  "desc": "Probleme à l'avenue de Morges 21",
+                  "date": "2012-12-31",
+
+                  "users":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "firstname": "Florent",
+                  "lastname": "Terieur",
+                  "phone": "+6624582",
+                  "roles": [
+                    "citizen",]
+                  },
+
+                  "issueType":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                  },
+                  
+                  "geoData": {
+                  "long": 41.123213,
+                  "lat": 7.623453323
+                  },
+
+                  }
+  /{id}:
+    get:
+      is: [auth: {roles: 'any'} ]
+      description: Retrieve the details of a specific issue.
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                  {
+                  "id" : "5463rasd2321321",
+                  "tag": "water,fire",
+                  "status" : "created",
+                  "desc": "Probleme à l'avenue de Morges 21",
+                  "date": "2012-12-31",
+
+                  "users":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "firstname": "Florent",
+                  "lastname": "Terieur",
+                  "phone": "+6624582",
+                  "roles": [
+                    "citizen",]
+                  },
+
+                  "issueType":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                  },
+                  
+                  "geoData": {
+                  "long": 41.123213,
+                  "lat": 7.623453323
+                  },
+
+                  "comment":[
+                  {
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Winter is coming"
+                  },
+                  {
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Bad dog on the place"
+                  }],
+                  }     
     put:
       is: [auth: {roles: 'staff'} ]
       description: Update the details of a specific issues.
       body:
         application/json:
           example: |
-            {
-              "user":{
-              "id": "54d8ae163fd30364605c81a4",
-              "firstname": "Florent",
-              "lastname": "Terieur",
-              "phone": "+6624582",
-              "roles": [
-                "citizen"
-              ]
-              }
-              "issueTypeId": "e163fd3036",
-              "desc": "Problem on road Morges 21",
-              "date": "2012-12-31",
-              "geoData": {
-              "long": 41.123213,
-              "lat": 7.623453323
-              },
-              "comment":{
-              "author": "23432sfsa",
-              "date": "2012-12-24",
-              "content":"Winter is coming"
-              },
-              "tag": "water,fire",
-              "status" : "created"
-                }
+                  {
+                  "id" : "5463rasd2321321",
+                  "tag": "water,fire",
+                  "status" : "created",
+                  "desc": "Probleme à l'avenue de Morges 21",
+                  "date": "2012-12-31",
+
+                  "users":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "firstname": "Florent",
+                  "lastname": "Terieur",
+                  "phone": "+6624582",
+                  "roles": [
+                    "citizen",]
+                  },
+
+                  "issueType":{
+                  "id": "54d8ae163fd30364605c81a4",
+                  "name": "Graffiti",
+                  "desc": "Graffiti a un endroit non approprie",
+                  },
+                  
+                  "geoData": {
+                  "long": 41.123213,
+                  "lat": 7.623453323
+                  },
+
+                  "comment":[
+                  {
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"Winter is coming"
+                  },
+                  {
+                  "author": "23432sfsa",
+                  "date": "2012-12-24",
+                  "content":"bad dog on the place"
+                  }],
+                  }
     delete:
       is: [auth: {roles: 'staff'} ]
       description: Delete a specific issue.
@@ -284,12 +344,35 @@ traits:
         204:
           body:
   /action:
-    post:
-      description: Coming
+    get:
+      is: [auth: { roles: 'staff' }]
+      description: Retrive the list of action of specific issue.
       responses:
         200:
-          body:       
-
+          body:
+            application/json:
+              example: |
+                [
+                  {
+                    "id": "54d8ae163fd30364605c81a4",
+                    "objective": "Change status : done"
+                  },
+                  {
+                    "id": "54d8ae163fd30364605c8324",
+                    "objective": "Change status : in_progess"
+                  },
+                  ...
+                ]
+    post:
+      description: Create a new action.
+      body:
+        application/json:
+          example: |
+                  {
+                    "id": "54d8ae163fd30364605c8324",
+                    "objective": "Change status : in_progess"
+                  },
+            
 
 
 

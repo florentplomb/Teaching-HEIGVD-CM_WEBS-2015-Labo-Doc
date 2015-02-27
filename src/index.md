@@ -1,5 +1,4 @@
 ---
-title: Smart City
 template: layout.jade
 menuIndex: 1
 ---
