@@ -114,12 +114,60 @@ traits:
                     "citizen"
                   ]
                 }
+
     delete:
       is: [auth: {roles: 'staff'} ]
       description: Delete a specific user.
       responses:
         204:
           body:
+    /issues:
+      get:
+        description: Retrieve all issue  of specific user
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+    
+                 [
+                  {
+                      "id": "54edf0bcd591c350267698a7",
+                      "tag": [
+                          "54ec59885483b95c16e13d03",
+                          "54ec59885483b95c16e13d04"
+                      ],
+                      "status": "in progress",
+                      "desc": "A new issue ",
+                      "date": "2015-02-25T15:56:44.479Z",
+                      "user": {
+                          "_id": "54ec58b05483b95c16e13cea",
+                          "firstname": "Benoit",
+                          "lastname": "Terieur",
+                          "phone": "+4377697",
+                          "__v": 0,
+                          "roles": [
+                              "citizen",
+                              "staff"
+                          ]
+                      },
+                      "issueType": [
+                          "54ec59305483b95c16e13cf7"
+                      ],
+                      "geoData": {
+                          "lat": 7.623453323,
+                          "lg": 41.123213
+                      },
+                      "comment": [
+                          "54edf1afd591c350267698aa",
+                          "54ee325268fa98b425761c19",
+                          "54ee325d68fa98b425761c1b",
+                          "54ef09c669dce36c187f720a"
+                      ]
+                  },
+                  ...
+                  ]
+
 /issues:
   description: issues resource.
   get:
@@ -130,120 +178,119 @@ traits:
         body:
           application/json:
             example: |
-              [
-                {
-                  "id" : "5463rasd2321321",
-                  "tag": "water,fire",
-                  "status" : "created",
-                  "desc": "Probleme à l'avenue de Morges 21",
-                  "date": "2012-12-31",
-
-                  "users":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Florent",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen",]
-                  },
-
-                  "issueType":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "name": "Graffiti",
-                  "desc": "Graffiti a un endroit non approprie",
-                  },
-                  
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-
-                  "comment":[
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"Winter is coming"
-                  },
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"bad dog on the place"
-                  }],
-                  },
-                  {
-                  "id" : "5463rasd2321321",
-                  "tag": "water,fire",
-                  "status" : "created",
-                  "desc": "Probleme à l'avenue de Morges 21",
-                  "date": "2012-12-31",
-
-                  "users":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Florent",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen",]
-                  },
-
-                  "issueType":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "name": "Graffiti",
-                  "desc": "Graffiti a un endroit non approprie",
-                  },
-                  
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-
-                  "comment":[
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"Winter is coming"
-                  },
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"bad dog on the place"
-                  }],
-                  }
-                ...
-              ]
+                [
+                    {
+                        "id": "54edf0bcd591c350267698a7",
+                        "tag": [
+                            "54ec59885483b95c16e13d03",
+                            "54ec59885483b95c16e13d04"
+                        ],
+                        "status": "in progress",
+                        "desc": "A new issue ",
+                        "date": "2015-02-25T15:56:44.479Z",
+                        "user": "54ec58b05483b95c16e13cea",
+                        "issueType": [
+                            "54ec59305483b95c16e13cf7"
+                        ],
+                        "geoData": {
+                            "lat": 7.623453323,
+                            "lg": 41.123213
+                        },
+                        "comment": [
+                            "54edf1afd591c350267698aa",
+                            "54ee325268fa98b425761c19",
+                            "54ee325d68fa98b425761c1b",
+                            "54ef09c669dce36c187f720a"
+                        ],
+                        "action": [
+                            "54f066eb9d6e82c40e2ac3cb",
+                            "54f067189d6e82c40e2ac3cc"
+                        ]
+                    },
+                    {
+                        "id": "54eef08ef1c245f40f6c3ff0",
+                        "tag": [
+                            "54ec59885483b95c16e13d03",
+                            "54ec59885483b95c16e13d04"
+                        ],
+                        "status": "created",
+                        "desc": "une 2ieme issue ",
+                        "date": "2015-02-26T10:08:14.580Z",
+                        "user": "54ec58b05483b95c16e13ceb",
+                        "issueType": [
+                            "54ec59305483b95c16e13cf7"
+                        ],
+                        "geoData": {
+                            "lat": 7.623453323,
+                            "lg": 41.123213
+                        },
+                        "comment": [],
+                        "action": []
+                    },
+                    {
+                        "id": "54eef0a1f1c245f40f6c3ff1",
+                        "tag": [
+                            "54ec59885483b95c16e13d03",
+                            "54ec59885483b95c16e13d04"
+                        ],
+                        "status": "created",
+                        "desc": "une 2ieme issue ",
+                        "date": "2015-02-26T10:08:33.728Z",
+                        "user": "54ec58b05483b95c16e13cec",
+                        "issueType": [
+                            "54ec59305483b95c16e13cf7"
+                        ],
+                        "geoData": {
+                            "lat": 7.623453323,
+                            "lg": 41.123213
+                        },
+                        "comment": [],
+                        "action": []
+                    },
+                    ...
+                    ]
   post:
     description: Create a new issue.
     body:
       application/json:
         example: |
-                  {
-                  "id" : "5463rasd2321321",
-                  "tag": "water,fire",
-                  "status" : "created",
-                  "desc": "Probleme à l'avenue de Morges 21",
-                  "date": "2012-12-31",
+              {           
+                      "status" : "created",
+                      "desc": "A new issue ",            
+                      "userId":"54ec58b05483b95c16e13cea",
+                      "issueTypeId": ["54ec59305483b95c16e13cf7"],
+                      "tag" :["54ec59885483b95c16e13d03","54ec59885483b95c16e13d04"],    
+                        "geoData":{"lg":"41.123213",
+                           "lat": "7.623453323"}
+              }
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                    "id": "54f08b0d770118f0189d0de9",
+                    "tag": [
+                        "54ec59885483b95c16e13d03",
+                        "54ec59885483b95c16e13d04"
+                    ],
+                    "status": "created",
+                    "desc": "A new issue ",
+                    "date": "2015-02-27T15:19:41.777Z",
+                    "user": "54ec58b05483b95c16e13cea",
+                    "issueType": [
+                        "54ec59305483b95c16e13cf7"
+                    ],
+                    "geoData": {
+                        "lat": 7.623453323,
+                        "lg": 41.123213
+                    },
+                    "comment": [],
+                    "action": []
+               }
 
-                  "users":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Florent",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen",]
-                  },
 
-                  "issueType":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "name": "Graffiti",
-                  "desc": "Graffiti a un endroit non approprie",
-                  },
-                  
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-
-                  }
+      
   /{id}:
     get:
       is: [auth: {roles: 'any'} ]
@@ -254,43 +301,79 @@ traits:
             application/json:
               example: |
                   {
-                  "id" : "5463rasd2321321",
-                  "tag": "water,fire",
-                  "status" : "created",
-                  "desc": "Probleme à l'avenue de Morges 21",
-                  "date": "2012-12-31",
-
-                  "users":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Florent",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen",]
-                  },
-
-                  "issueType":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "name": "Graffiti",
-                  "desc": "Graffiti a un endroit non approprie",
-                  },
-                  
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-
-                  "comment":[
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"Winter is coming"
-                  },
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"Bad dog on the place"
-                  }],
+                    "id": "54edf0bcd591c350267698a7",
+                    "tag": [
+                        {
+                            "_id": "54ec59885483b95c16e13d03",
+                            "desc": "Egestas,Orci,Proin",
+                            "__v": 0
+                        },
+                        {
+                            "_id": "54ec59885483b95c16e13d04",
+                            "desc": "Quam,Proin,Non,Posuere",
+                            "__v": 0
+                        }
+                    ],
+                    "status": "in progress",
+                    "desc": "A new issue ",
+                    "date": "2015-02-25T15:56:44.479Z",
+                    "user": {
+                        "_id": "54ec58b05483b95c16e13cea",
+                        "firstname": "Benoit",
+                        "lastname": "Terieur",
+                        "phone": "+4377697",
+                        "__v": 0,
+                        "roles": [
+                            "citizen",
+                            "staff"
+                        ]
+                    },
+                    "issueType": [
+                        {
+                            "_id": "54ec59305483b95c16e13cf7",
+                            "name": "broken streetlight",
+                            "desc": "Mauris tempus orci quis orci lacinia cursus.",
+                            "__v": 0
+                        }
+                    ],
+                    "geoData": {
+                        "lat": 7.623453323,
+                        "lg": 41.123213
+                    },
+                    "comment": [
+                        {
+                            "_id": "54edf1afd591c350267698aa",
+                            "user": "54ec58b05483b95c16e13cea",
+                            "content": "Hello l'equipe voiçi le commentaire à ajouter à l'issue",
+                            "__v": 0,
+                            "date": "2015-02-25T16:00:47.702Z"
+                        },
+                        {
+                            "_id": "54ee325268fa98b425761c19",
+                            "user": "54e999763f45823810976be7",
+                            "content": "Hello l'equipe voiçi le commentaire à ajouter à l'issue3",
+                            "__v": 0,
+                            "date": "2015-02-25T20:36:34.098Z"
+                        },
+                        {
+                            "_id": "54ee325d68fa98b425761c1b",
+                            "user": "54e999763f45823810976be7",
+                            "content": "Hello l'equipe voiçi le commentaire à ajouter à l'issue3",
+                            "__v": 0,
+                            "date": "2015-02-25T20:36:45.887Z"
+                        },
+                        {
+                            "_id": "54ef09c669dce36c187f720a",
+                            "user": "54e999763f45823810976be7",
+                            "content": "Hello l'equipe voiçi le commentaire à ajouter à l'issue3",
+                            "__v": 0,
+                            "date": "2015-02-26T11:55:50.851Z"
+                        }
+                    ],
+                    "action": [
+                        "54f066eb9d6e82c40e2ac3cb",
+                        "54f067189d6e82c40e2ac3cc"
+                    ]
                   }     
     put:
       is: [auth: {roles: 'staff'} ]
@@ -299,43 +382,13 @@ traits:
         application/json:
           example: |
                   {
-                  "id" : "5463rasd2321321",
-                  "tag": "water,fire",
-                  "status" : "created",
-                  "desc": "Probleme à l'avenue de Morges 21",
-                  "date": "2012-12-31",
+          
+                    "status" : "created",
+                    "desc": "A new issue ",            
+                    "tag" :["54ec59885483b95c16e13d03","54ec59885483b95c16e13d04"],    
+                      "geoData":{"lg":"41.123213",
+                         "lat": "7.623453323"}
 
-                  "users":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "firstname": "Florent",
-                  "lastname": "Terieur",
-                  "phone": "+6624582",
-                  "roles": [
-                    "citizen",]
-                  },
-
-                  "issueType":{
-                  "id": "54d8ae163fd30364605c81a4",
-                  "name": "Graffiti",
-                  "desc": "Graffiti a un endroit non approprie",
-                  },
-                  
-                  "geoData": {
-                  "long": 41.123213,
-                  "lat": 7.623453323
-                  },
-
-                  "comment":[
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"Winter is coming"
-                  },
-                  {
-                  "author": "23432sfsa",
-                  "date": "2012-12-24",
-                  "content":"bad dog on the place"
-                  }],
                   }
     delete:
       is: [auth: {roles: 'staff'} ]
@@ -345,23 +398,66 @@ traits:
           body:
   /action:
     get:
+      queryParameters:
+           status:
+             displayName: status
+             type: string
+             description: status of issue retrived
+             example: in progress
+             required: false
+           type:
+             displayName: type
+             type: string
+             description: type of issue retrived
+             example: 54ec59f2c41943dc1460b222
+             required: false
+           date1:
+             displayName: date1
+             type: date
+             description: Start date for issue retrived
+             example: 9/2/2014
+             required: false
+           date2:
+             displayName: date2
+             type: date
+             description: End date for issue retrived
+             example: 9/2/2017
+             required: false
+
       is: [auth: { roles: 'staff' }]
-      description: Retrive the list of action of specific issue.
+      description: Retrive the list of action of specific issue . Use filter with query parameters
       responses:
         200:
           body:
             application/json:
               example: |
                 [
+
                   {
-                    "id": "54d8ae163fd30364605c81a4",
-                    "objective": "Change status : done"
+                      "id": "54f066eb9d6e82c40e2ac3cb",
+                      "actionType": {
+                          "_id": "54ec59f2c41943dc1460b222",
+                          "code": 1,
+                          "type": "Change Status",
+                          "desc": "Changement du status d'une issue ",
+                          "__v": 0
+                      },
+                      "desc": "in_progress",
+                      "user": "54e999763f45823810976be7"
                   },
                   {
-                    "id": "54d8ae163fd30364605c8324",
-                    "objective": "Change status : in_progess"
-                  },
-                  ...
+                      "id": "54f067189d6e82c40e2ac3cc",
+                      "actionType": {
+                          "_id": "54ec59f2c41943dc1460b222",
+                          "code": 1,
+                          "type": "Change Status",
+                          "desc": "Changement du status d'une issue ",
+                          "__v": 0
+                      },
+                      "desc": "in progress",
+                      "user": "54e999763f45823810976be7"
+                  }
+
                 ]
     post:
       description: Create a new action.
@@ -369,9 +465,47 @@ traits:
         application/json:
           example: |
                   {
-                    "id": "54d8ae163fd30364605c8324",
-                    "objective": "Change status : in_progess"
+                  
+                  "actionTypeId": "54ec59f2c41943dc1460b221",            
+                  "userId":"54e999763f45823810976be7",
+                  "desc"  :"Hello l'equipe voiçi le commentaire à ajouter à l'issue3"
+               
+                  }
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": "54edf0bcd591c350267698a7",
+                  "tag": [
+                      "54ec59885483b95c16e13d03",
+                      "54ec59885483b95c16e13d04"
+                  ],
+                  "status": "in progress",
+                  "desc": "A new issue ",
+                  "date": "2015-02-25T15:56:44.479Z",
+                  "user": "54ec58b05483b95c16e13cea",
+                  "issueType": [
+                      "54ec59305483b95c16e13cf7"
+                  ],
+                  "geoData": {
+                      "lat": 7.623453323,
+                      "lg": 41.123213
                   },
+                  "comment": [
+                      "54edf1afd591c350267698aa",
+                      "54ee325268fa98b425761c19",
+                      "54ee325d68fa98b425761c1b",
+                      "54ef09c669dce36c187f720a",
+                      "54f09d14018edb1c03ac0d50"
+                  ],
+                  "action": [
+                      "54f066eb9d6e82c40e2ac3cb",
+                      "54f067189d6e82c40e2ac3cc",
+                      "54f09d14018edb1c03ac0d4f"
+                  ]
+                 }
             
 
 
@@ -466,16 +600,29 @@ traits:
         204:
           body:
 
-
-
-
-
-
 /data:
   description: Data resource.
-  /populate:
+  /populateuser:
     post:
-      description: Allow to populate random data to have a starting situation.
+      description: Allow to populate random user data to have a starting situation.
       responses:
         200:
           body:
+  /populateactiontype:
+    post:
+      description: Allow to populate random user data to have a starting situation.
+      responses:
+        200:
+          body:
+  /populateissuetype:
+    post:
+      description: Allow to populate random user data to have a starting situation.
+      responses:
+        200:
+          body:         
+  /populatetag:
+    post:
+      description: Allow to populate random user data to have a starting situation.
+      responses:
+        200:
+          body:            
