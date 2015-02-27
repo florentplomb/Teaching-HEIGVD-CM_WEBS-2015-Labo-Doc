@@ -1,19 +1,5 @@
 extends layout
 
-block body
-
-	div!=contents
-
-	for appentry in collections.apps
-		.panel.panel-default(class=appentry.private?'panel-warning':'')
-			.panel-heading
-				h3.panel-title
-					unless appentry.public
-						span.glyphicon.glyphicon-lock
-					=appentry.title
-			.panel-body!=appentry.contents
-			.panel-footer
-				a(href="#top").btn Back to top
 
 append menu
 	h1 Resources
