@@ -16,8 +16,9 @@ Téléphone *024 557 63 30 | www.heig-vd.ch
 
 Example route 
 
-http://afternoon-woodland-9450.herokuapp.com/api/users
-http://afternoon-woodland-9450.herokuapp.com/api/issue
+- http://afternoon-woodland-9450.herokuapp.com/api/users
+
+- http://afternoon-woodland-9450.herokuapp.com/api/issue
 
 ## Our Choice
 
