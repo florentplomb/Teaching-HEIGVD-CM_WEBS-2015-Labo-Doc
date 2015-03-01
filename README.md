@@ -66,14 +66,14 @@ To [APIDoc Seed](https://github.com/lotaris/apidoc-seed).
 
 ## License
 
-http://nodejs.org/
-http://daringfireball.net/projects/markdown/syntax
-http://raml.org/
-http://gruntjs.com/
-http://www.metalsmith.io/
-http://jade-lang.com/
-http://learnboost.github.io/stylus/
-http://getbootstrap.com/
+*http://nodejs.org/
+*http://daringfireball.net/projects/markdown/syntax
+*http://raml.org/
+*http://gruntjs.com/
+*http://www.metalsmith.io/
+*http://jade-lang.com/
+*http://learnboost.github.io/stylus/
+*http://getbootstrap.com/
 
 
 
