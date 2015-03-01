@@ -46,7 +46,7 @@ If you're using an object database like Mongo, then you can extend JavaScript to
 
 To finish :  Node is trendy at the moment. It is great to impress these friends in a discussion.
 
-*Documentation of the API of the Citizen Engagement*
+## Documentation of the API of the Citizen Engagement
 
 This is a generator that compiles [Markdown][md] and [RAML][raml] files into a
 static site. The following [Node.js][node] stack is used:
@@ -66,14 +66,14 @@ To [APIDoc Seed](https://github.com/lotaris/apidoc-seed).
 
 ## License
 
-[node]: http://nodejs.org/
-[md]: http://daringfireball.net/projects/markdown/syntax
-[raml]: http://raml.org/
-[grunt]: http://gruntjs.com/
-[metalsmith]: http://www.metalsmith.io/
-[jade]: http://jade-lang.com/
-[stylus]: http://learnboost.github.io/stylus/
-[bootstrap]: http://getbootstrap.com/
+http://nodejs.org/
+http://daringfireball.net/projects/markdown/syntax
+http://raml.org/
+http://gruntjs.com/
+http://www.metalsmith.io/
+http://jade-lang.com/
+http://learnboost.github.io/stylus/
+http://getbootstrap.com/
 
 
 
