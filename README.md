@@ -1,6 +1,6 @@
 # Smart City - Citizen Engagement - Doc 
 
-## Etudiants
+## Students
 
 Clélia Panchaud & Florent plomb 
 COMEM MIT41 & MM41
