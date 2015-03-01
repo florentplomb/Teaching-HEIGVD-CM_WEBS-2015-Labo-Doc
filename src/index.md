@@ -31,7 +31,7 @@ You will discover on this website the marvelous [API documentation](/api) and th
 </div>
 <div>-</div>
 <div>
-<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?date2=%2201/01/2014%22 </code>
+<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?date2=%2201/01/2014%22</code>
 </div>
 <div>-</div>
 <div>

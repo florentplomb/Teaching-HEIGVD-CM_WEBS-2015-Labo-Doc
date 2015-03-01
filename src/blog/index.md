@@ -1,7 +1,7 @@
 ---
 #h1 header
 
-title: Blog de Florent et Clélia
+title: Clélia & Flo's blog
 sectionName: Blog
 template: blog.jade
 menuIndex: 2
