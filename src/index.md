@@ -41,3 +41,10 @@ You will discover on this website the marvelous [API documentation](/api) and th
 <div style="margin-top:1em";>
 <code>http://afternoon-woodland-9450.herokuapp.com/api/issues?dateStart=01/01/2017&dateEnd=01/01/2020 </code>
 </div>
+
+<div style="margin-top:1em";>
+<code>http://afternoon-woodland-9450.herokuapp.com/api/users/54f1a9066569a00e0045e4a6/issues </code>
+</div>
+
+
+
