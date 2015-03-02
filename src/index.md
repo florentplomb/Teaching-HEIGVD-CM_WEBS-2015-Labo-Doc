@@ -27,6 +27,10 @@ You will discover on this website the marvelous [API documentation](/api) and th
 </div>
 
 <div style="margin-top:1em";>
+<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?geolgmin=10&geolgmax=20</code>
+</div>
+
+<div style="margin-top:1em";>
 <code>http://afternoon-woodland-9450.herokuapp.com/api/issues?status=in%20progress</code>
 </div>
 
