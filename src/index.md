@@ -35,9 +35,9 @@ You will discover on this website the marvelous [API documentation](/api) and th
 </div>
 
 <div style="margin-top:1em";>
-<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?date2=01/01/2014</code>
+<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?dateEnd=01/01/2014</code>
 </div>
 
 <div style="margin-top:1em";>
-<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?date1=01/01/2015&date2=01/01/2020 </code>
+<code>http://afternoon-woodland-9450.herokuapp.com/api/issues?dateStart=01/01/2017&dateEnd=01/01/2020 </code>
 </div>
