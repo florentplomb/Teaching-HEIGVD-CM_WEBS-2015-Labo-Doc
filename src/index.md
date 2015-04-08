@@ -15,8 +15,19 @@ take care of this issue to solve it.
 You will discover on this website the marvelous [API documentation](/api) and the [epic stories](/blog)
 
 </div>
+<div style="margin-top:1em; font-size:1.1em;">
+<code> Mobile application :</code>
+</div>
+
 <div style="margin-top:2em; margin-bottom:2em; font-size:1.3em; ">
-<code style="padding:0.5em; margin-right:1.2em;"><a href="http://afternoon-woodland-9450.herokuapp.com/api/issues"> Click : API on Heroku </a> </code> <code style="padding:0.5em;"><a href="https://github.com/florentplomb/Teaching-HEIGVD-CM_WEBS-2015-Labo-Express.git"> Click : API on GitHub </a> </code> 
+<code style="padding:0.5em; margin-right:1.2em;"><a href="https://github.com/florentplomb/Teaching-HEIGVD-CM_APPMOB-2015-CitizenEngagement"> Click : Mobile application </a> </code>
+
+</div>
+<div style="margin-top:1em; font-size:1.1em;">
+<code> Web service :</code>
+</div>
+<div style="margin-top:2em; margin-bottom:2em; font-size:1.3em; ">
+<code style="padding:0.5em; margin-right:1.2em;"><a href="http://afternoon-woodland-9450.herokuapp.com/api/issues"> Click : API on Heroku </a> </code> <code style="padding:0.5em;"><a href="https://github.com/florentplomb/Teaching-HEIGVD-CM_WEBS-2015-Labo-Express.git"> Click : API on GitHub </a> </code>
 </div>
 <div style="margin-top:1em; font-size:1.1em;">
 <code> Example query parameters on API deployed on heroku :</code>
