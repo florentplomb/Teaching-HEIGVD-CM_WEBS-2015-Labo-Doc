@@ -7,10 +7,10 @@ menuIndex: 1
 
 <div id="hometext">
 Welcome on board! You are about to discover the wonderful world where people are participating
-in the city life everyday.
-
-Each citizen is able to submit any issue he disovers in the city and then a staff member can
+in the city life everyday.Each citizen is able to submit any issue he disovers in the city and then a staff member can
 take care of this issue to solve it.
+
+We are proud to present you this new way of living, where everyone feels concern and actively participate at all times in civic work!
 
 You will discover on this website the marvelous [API documentation](/api) and the [epic stories](/blog)
 
